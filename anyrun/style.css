@@ -1,0 +1,57 @@
+list#plugin,
+list#main,
+window {
+	background: transparent;
+}
+
+#main {
+	background: rgba(0, 0, 0, 0.01);
+}
+box#main {
+	padding: 2rem;
+	border: rgba(212, 190, 152, 0.2) solid 1px;
+	border-radius: 2rem;
+}
+
+#entry {
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+	padding: 0.5rem 1.5rem;
+	background: rgba(41, 40, 40, 0.1);
+}
+
+#match-title {
+	font-size: 1.25rem;
+	font-weight: 600;
+}
+
+row#match {
+	border-radius: 0.75rem;
+	padding: 0.5rem 1rem;
+}
+#match-desc {
+	margin-top: 0.5rem;
+	font-weight: 900;
+	opacity: 0.6;
+}
+
+#main > row {
+	border: rgba(212, 190, 152, 0.2) solid 0px;
+	margin: 0.5rem 0rem;
+	background: rgba(197, 177, 141, 0.05);
+	padding: 1.5rem;
+	border-radius: 1rem;
+}
+
+label#plugin {
+	font-weight: bold;
+	opacity: 0.6;
+}
+
+separator {
+	outline: none;
+	outline-width: 0px;
+	min-width: 0px;
+	border: none;
+	background-blend-mode: overlay;
+}

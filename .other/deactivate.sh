@@ -1,0 +1,1 @@
+hyprctl reload

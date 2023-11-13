@@ -1,0 +1,39 @@
+// ~/.config/fastfetch/config.jsonc
+// See https://github.com/fastfetch-cli/fastfetch/wiki/Configuration for more details
+// See *.jsonc in https://github.com/fastfetch-cli/fastfetch/tree/dev/presets/examples for more examples
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+		"source": "~/.local/share/chezmoi/.other/assets/cowboy-bebop-logo.png",
+		"type": "kitty",
+		"height": 8,
+		"padding": {
+			"top": 0
+		}
+	},
+	"display": {
+		"percent": { "type": 9 }, // colored percent number
+		"separator": "  "
+	},
+	"modules": [
+		{
+			"type": "title",
+			"color": {
+				"at": "bright_black",
+				"host": "bright_red",
+				"user": "bright_yellow"
+			}
+		},
+		{ "type": "separator", "string": "─" },
+		{ "type": "os", "key": "󰌽" },
+		{ "type": "kernel", "key": "󱗜" },
+		{ "type": "packages", "key": "󰏓" },
+		{ "type": "shell", "key": "" },
+		{ "type": "wm", "key": "" },
+		{ "type": "theme", "key": "" },
+		{ "type": "terminal", "key": "" },
+		{ "type": "memory", "key": "󰍛" },
+		"break",
+		{ "type": "colors", "symbol": "circle" }
+	]
+}

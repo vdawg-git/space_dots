@@ -1,0 +1,118 @@
+@define-color bar-bg rgba(14, 14, 14, 0.00);
+
+@define-color main-color @theme_text_color;
+@define-color main-bg rgba(14, 14, 14, 0);
+@define-color dark #292828;
+
+@define-color tool-bg #292828;
+@define-color tool-color #c5b18d;
+@define-color tool-border #383432;
+
+@define-color wb-color #a89984;
+
+@define-color wb-act-bg #7c6f64;
+@define-color wb-act-color #504945;
+
+@define-color wb-hvr-bg rgba(216, 166, 87,0.1);
+@define-color wb-hvr-color #5a524c;
+
+* {
+	border: none;
+	border-radius: 0px;
+	font-family: "Zpix";
+	font-weight: bold;
+}
+
+.modules-right {
+	background: @main-bg;
+	padding-left: 16px;
+}
+
+window#waybar {
+	background: @bar-bg;
+	border-radius: 12px;
+	margin-top: 8px;
+
+}
+
+tooltip {
+	background: @main-bg;
+	color: @tool-color;
+	border-radius: 16px;
+	padding: 16px;
+}
+
+#workspaces {
+	padding-left: 16px;
+	padding-right: 16px;
+	background: @main-bg;
+	border-radius: 0px 24px 24px 0px;
+}
+
+#workspaces button {
+	font-size: 20px;
+	box-shadow: none;
+	text-shadow: none;
+	padding: 0px;
+	min-width: 32px;
+	color: @tool-color;
+	transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	opacity: 0.9;
+}
+
+#workspaces button.active {
+	color: @theme_selected_bg_color;
+	transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	opacity: 0.95;
+}
+
+#workspaces button:hover {
+	color: @wb-hvr-color;
+	transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+	opacity: 1;
+}
+
+#cpu,
+#battery,
+#memory,
+#clock,
+#window,
+#network,
+#bluetooth,
+#pulseaudio,
+#mpris,
+#custom-updates,
+#custom-wallchange,
+#custom-mode,
+#custom-cliphist,
+#custom-wbar,
+#custom-power,
+#tray {
+	font-size: 18px;
+	color: @main-color;
+	opacity: 0.9;
+	padding-left: 12px;
+	padding-right: 12px;
+}
+
+#window,
+#taskbar {
+	padding: 0px;
+}
+
+#custom-random {
+	color: @tool-color ;
+	padding-right: 8px;
+}
+
+
+#image.spacebar {
+	background-image: url("/home/vdawg/.local/share/chezmoi/.other/hyprshaders/spacebar.png");
+	background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+	min-width: 200px;
+min-height: 36px;
+margin-top: 4px;
+}
+

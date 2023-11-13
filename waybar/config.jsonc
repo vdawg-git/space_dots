@@ -1,0 +1,105 @@
+{
+	"layer": "top",
+	"position": "top",
+	"mod": "dock",
+	"height": 40,
+	"exclusive": true,
+	"passthrough": false,
+	"gtk-layer-shell": true,
+	"margin": "0px 0px 0px 0px",
+
+	"modules-left": ["hyprland/workspaces"],
+	"modules-center": ["image#spacebar"],
+	"modules-right": ["custom/random", "cpu", "clock"],
+
+	"cpu": {
+		"interval": 10,
+		"format-alt": "󰍛 {usage}%",
+		"format": "{icon0}{icon1}{icon2}{icon3}",
+		"format-icons": ["▏", "▎", "▍", "▌", "▋", "▊", "█", "█"]
+	},
+
+	"memory": {
+		"interval": 30,
+		"format": "󰾆 {percentage}%",
+		"format-alt": "󰾅 {used}GB",
+		"max-length": 10,
+		"tooltip": true,
+		"tooltip-format": " {used:0.1f}GB/{total:0.1f}GB"
+	},
+
+	"clock": {
+		"format": "{:%H:%M}",
+		"format-alt": "{:%H:%M  %b %Y}",
+		"tooltip-format": "{calendar}"
+	},
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"1": "一",
+			"2": "二",
+			"3": "三",
+			"4": "四",
+			"5": "五",
+			"6": "六",
+			"7": "七",
+			"8": "八",
+			"9": "九",
+			"10": "十"
+			// "urgent": "",
+			// "active": "",
+			// "default": ""
+		},
+		"sort-by-number": true
+	},
+
+	"wlr/taskbar": {
+		"format": "{icon}",
+		"icon-size": 24,
+		"icon-theme": "Adwaita",
+		"tooltip-format": "{title}",
+		"on-click": "activate",
+		"on-click-middle": "close",
+		"ignore-list": ["kitty"],
+		"app_ids-mapping": {
+			"firefoxdeveloperedition": "firefox-developer-edition"
+		}
+	},
+
+	"battery": {
+		"format": "{icon}  {time}",
+		"format-alt": "{icon}  {capacity}% - {time}",
+		"format-icons": ["", "", "", "", ""],
+		"format-time": "{H}h{M}m",
+		"format-charging": "  {icon}  {capacity}% - {time}",
+		"format-full": "  {icon}  Charged",
+		"interval": 60,
+		"states": {
+			"warning": 25,
+			"critical": 10
+		},
+		"tooltip": false,
+		"on-click": "gnome-power-statistics"
+	},
+
+	"tray": {
+		"icon-size": 16,
+		"spacing": 8
+	},
+
+	"custom/random": {
+		"format": "{}",
+		"exec": "~/.local/share/chezmoi/.other/hyprshaders/charget.js" ,
+		"interval": 4, // Roughly 24 FPS
+		"tooltip": false
+	},
+
+	"image#spacebar": {
+		"format": " {} ",
+		"exec": "echo 'x'",
+		"interval": 86400, // once every day
+		}
+
+}
