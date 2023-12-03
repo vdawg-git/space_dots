@@ -1,6 +1,7 @@
 # Golden Era
 
 The dots to recreate my rice for the Hyprland space ricing competition.
+This is a theme to recreate the look and not my actual dotfiles.
 
 If I missed something, feel free to open an issue :)
 
